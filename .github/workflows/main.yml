@@ -1,3 +1,21 @@
+---
+name: Build
+
+# Trigger the workflow on all pull requests and only pushes to the main branch
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   docker:
     strategy:
