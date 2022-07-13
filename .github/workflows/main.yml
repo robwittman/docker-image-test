@@ -75,7 +75,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            "NBL_ARG_BUILD_TIMESTAMP=${{ steps.current-time.outputs.formattedTime }}"
-            "NBL_ARG_REVISION=${{ github.sha }}"
-            "NBL_ARG_BUILD_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            "NBL_ARG_VERSION=${{ github.ref }}"
+            "BUILD_TIMESTAMP=${{ steps.current-time.outputs.formattedTime }}"
+            "REVISION=${{ github.sha }}"
+            "BUILD_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            "VERSION=${{ github.ref }}"
