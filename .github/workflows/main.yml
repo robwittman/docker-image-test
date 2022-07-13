@@ -22,7 +22,7 @@ jobs:
       matrix:
         arch: 
           - amd64
-        language
+        language:
           - python 
           - golang 
     runs-on: ubuntu-20.04
